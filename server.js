@@ -9,11 +9,11 @@ const AWS = require("aws-sdk");
 const paymentsRoutes = require("./payments"); // Import payments.js
 const profileRoutes = require("./profile"); // Import profile routes
 const { exec } = require("child_process");
-require('./chatting')(app);
-
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+
+require('./chatting')(app);
 
 
 // Middleware
@@ -432,7 +432,7 @@ app.use("/payments", paymentsRoutes); // Mount payments routes
 app.use("/profile", profileRoutes); // Mount profile routes at /profile
 
 // Start the chat server
-/*exec("node ./chatting.js", (error, stdout, stderr) => {
+exec("node ./chatting.js", (error, stdout, stderr) => {
   if (error) {
     console.error(`Error starting chat server: ${error.message}`);
     return;
@@ -442,7 +442,7 @@ app.use("/profile", profileRoutes); // Mount profile routes at /profile
     return;
   }
   console.log(`Chat server stdout: ${stdout}`);
-});*/
+});
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
