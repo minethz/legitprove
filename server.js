@@ -442,11 +442,6 @@ exec("node /Users/minethperera/Desktop/Scam_detection_System/platform-api/chatti
   console.log(`Chat server stdout: ${stdout}`);
 });
 
-app.listen(port, () => {
-  console.log(`✅ Server running at http://localhost:${port}`);
-});
-
-
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
