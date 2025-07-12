@@ -8,6 +8,7 @@ const fs = require("fs");
 const AWS = require("aws-sdk");
 const paymentsRoutes = require("./payments"); // Import payments.js
 const profileRoutes = require("./profile"); // Import profile routes
+const signupRoutes = require("./signup"); // Import signup.js
 const { exec } = require("child_process");
 
 
@@ -428,6 +429,7 @@ app.get("/reports/top-liked", async (req, res) => {
 
 app.use("/payments", paymentsRoutes); // Mount payments routes
 app.use(profileRoutes); // Add profile routes
+app.use(signupRoutes); // Mount signup routes
 
 // Start the chat server
 exec("node /Users/minethperera/Desktop/Scam_detection_System/platform-api/chatting.js", (error, stdout, stderr) => {
@@ -449,7 +451,7 @@ app.listen(port, () => {
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-})
+});
 
 app.get('/', (req, res) => {
   res.send('Node.js backend is working!');
