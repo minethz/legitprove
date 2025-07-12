@@ -430,7 +430,7 @@ app.use("/payments", paymentsRoutes); // Mount payments routes
 app.use("/profile", profileRoutes); // Mount profile routes at /profile
 
 // Start the chat server
-exec("node /chatting.js", (error, stdout, stderr) => {
+exec("node ./chatting.js", (error, stdout, stderr) => {
   if (error) {
     console.error(`Error starting chat server: ${error.message}`);
     return;
