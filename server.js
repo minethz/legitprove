@@ -446,3 +446,8 @@ exec("node /Users/minethperera/Desktop/Scam_detection_System/platform-api/chatti
 app.listen(port, () => {
   console.log(`✅ Server running at http://localhost:${port}`);
 });
+
+
+app.get('/', (req, res) => {
+  res.send('Node.js backend is working!');
+});
