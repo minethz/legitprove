@@ -13,8 +13,6 @@ const { exec } = require("child_process");
 const app = express();
 const PORT = process.env.PORT || 8000;
 
-require('./chatting')(app);
-
 
 // Middleware
 app.use(cors());
