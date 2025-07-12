@@ -10,7 +10,6 @@ const paymentsRoutes = require("./payments"); // Import payments.js
 const profileRoutes = require("./profile"); // Import profile routes
 const signupRoutes = require("./signup"); // Import signup.js
 const { exec } = require("child_process");
-const signupRoutes = require("./signup"); // ✅
 
 
 const app = express();
