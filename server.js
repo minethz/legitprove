@@ -14,7 +14,7 @@ const signupRoutes = require("./signup"); // ✅
 
 
 const app = express();
-const port = 5001;
+const PORT = process.env.PORT || 8000;
 
 // Middleware
 app.use(cors());
@@ -449,6 +449,10 @@ app.listen(port, () => {
   console.log(`✅ Server running at http://localhost:${port}`);
 });
 
+
+app.listen(PORT, () => {
+  console.log(Server running on port ${PORT});
+});
 
 app.get('/', (req, res) => {
   res.send('Node.js backend is working!');
